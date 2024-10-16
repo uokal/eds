@@ -4,18 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fake Store - Product Detail</title>
+    <title>Product Details</title>
     <link rel="stylesheet" href="assents/style.css">
 </head>
 
 <body>
     <header>
-        <h1>Fake Store</h1>
-        <a href="cart.html">Go to Cart</a>
+        <div class="logo">
+            <a href="index.html"><img src="logo.png" alt="Logo"></a>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="cart">
+            <a href="cart.html"><img src="cart-icon.png" alt="Cart Icon"> <span id="cart-count">0</span></a>
+        </div>
     </header>
 
-    <main id="product-detail">
-        <div id="loading" class="loading">Loading...</div>
+    <main>
+        <div id="product-detail"></div>
     </main>
 
     <script src="assents/app.js"></script>

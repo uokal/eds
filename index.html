@@ -4,25 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fake Store - Home</title>
+    <title>Online Store</title>
     <link rel="stylesheet" href="assents/style.css">
 </head>
 
 <body>
     <header>
-        <h1>Fake Store</h1>
-        <input type="text" id="search-bar" placeholder="Search for products...">
+        <div class="logo">
+            <a href="index.html"><img src="logo.png" alt="Logo"></a>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="cart">
+            <a href="cart.html"><img src="cart-icon.png" alt="Cart Icon"> <span id="cart-count">0</span></a>
+        </div>
     </header>
 
-    <main id="product-list">
-        <div id="loading" class="loading">Loading...</div>
+    <main>
+        <h1>Welcome to Our Store</h1>
+        <input type="text" id="search-bar" placeholder="Search products..." onkeyup="searchProducts()">
+        <div id="product-list"></div>
+        <button id="load-more" onclick="loadMoreProducts()">Load More</button>
     </main>
-
-    <button id="load-more" class="load-more">Load More</button>
-
-    <footer>
-        <p>&copy; 2024 Fake Store</p>
-    </footer>
 
     <script src="assents/app.js"></script>
 </body>

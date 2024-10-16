@@ -22,8 +22,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (document.querySelector("#checkout-form")) {
         document.getElementById("checkout-form").addEventListener("submit", handleCheckout);
+        displayCart(); // Display cart in checkout page
     }
+
+    updateCartCount(); // Update cart count on page load
 });
+
+// Function to update cart count in the header
+function updateCartCount() {
+    const cartCountElement = document.getElementById("cart-count");
+    cartCountElement.textContent = cart.length;
+}
 
 // Fetch all products
 async function fetchProducts() {
@@ -119,6 +128,7 @@ function addToCart(productId) {
     cart.push(product);
     localStorage.setItem("cart", JSON.stringify(cart));
     alert("Product added to cart");
+    updateCartCount(); // Update cart count when a product is added
 }
 
 // Display cart
@@ -146,5 +156,7 @@ function displayCart() {
 function handleCheckout(event) {
     event.preventDefault();
     localStorage.removeItem("cart"); // Clear cart after checkout
+    cart = []; // Reset cart variable
+    updateCartCount(); // Update cart count after checkout
     window.location.href = "confirm.html";
 }

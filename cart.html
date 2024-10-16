@@ -4,23 +4,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fake Store - Cart</title>
+    <title>Your Cart</title>
     <link rel="stylesheet" href="assents/style.css">
 </head>
 
 <body>
     <header>
-        <h1>Your Cart</h1>
-        <a href="index.html">Continue Shopping</a>
+        <div class="logo">
+            <a href="index.html"><img src="logo.png" alt="Logo"></a>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="cart">
+            <a href="cart.html"><img src="cart-icon.png" alt="Cart Icon"> <span id="cart-count">0</span></a>
+        </div>
     </header>
 
-    <main id="cart-items">
-        <div id="empty-cart" class="loading">Your cart is empty.</div>
+    <main>
+        <h1>Your Shopping Cart</h1>
+        <div id="empty-cart" style="display:none;">
+            <p>Your cart is empty.</p>
+            <a href="index.html">Start Shopping</a>
+        </div>
+        <div id="cart-items"></div>
+        <button id="checkout-btn" disabled onclick="window.location.href='checkout.html'">Proceed to Checkout</button>
     </main>
-
-    <footer>
-        <button id="checkout-btn" disabled>Proceed to Checkout</button>
-    </footer>
 
     <script src="assents/app.js"></script>
 </body>
