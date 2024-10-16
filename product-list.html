@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Listing</title>
+    <link rel="stylesheet" href="assents/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Shop</h1>
+        <nav>
+            <a href="cart.html">Cart</a>
+        </nav>
+    </header>
+
+    <main>
+        <input type="text" id="search-bar" placeholder="Search products...">
+        <select id="sort-options">
+            <option value="price-low-high">Sort by Price: Low to High</option>
+            <option value="price-high-low">Sort by Price: High to Low</option>
+        </select>
+        <div id="product-list" class="products"></div>
+        <button id="load-more">Load More</button>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
